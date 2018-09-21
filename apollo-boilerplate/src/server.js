@@ -2,10 +2,12 @@ const express = require('express');
 const ApolloServer = require('apollo-server-express').ApolloServer;
 const schema = require('./schema');
 const resolvers = require('./resolvers');
+const cors = require('cors');
 
 class Server {
   constructor() {
     this.app = express();
+    this.app.use(cors());
     this.initApolloServer();
     this.startExpressServer();
   }

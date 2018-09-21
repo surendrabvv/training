@@ -9,10 +9,7 @@ const resolvers = {
     emails: emailObj.emails
   },
   User: {
-    emails: emailObj.getUserEmails,
-    username: () => {
-      return 'Custom username'
-    }
+    emails: emailObj.getUserEmails
   }
 };
 
